@@ -1,5 +1,5 @@
 {
-  "name": "dollar007/oxd-php-api",
+  "name": "dollar007/oxdPhpApi",
   "description": "Use OpenID Connect to login by leveraging the oxd client service demon.",
   "license": "proprietary",
   "authors": [
