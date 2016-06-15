@@ -1,0 +1,17 @@
+{
+  "name": "GluuFederation/oxd-php",
+  "description": "Use OpenID Connect to login by leveraging the oxd client service demon.",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Vlad Karapetyan",
+      "email": "vlad.karapetyan.1988@mail.ru"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.0"
+  },
+  "autoload": {
+    "classmap": ["src"]
+  }
+}
