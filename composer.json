@@ -14,9 +14,6 @@
   "autoload": {
     "psr-0": {
       "oxdPhpApi": "src/"
-    },
-    "psr-4": {
-      "oxdPhpApi": "protocolTests/"
     }
   }
 }
