@@ -1,5 +1,5 @@
 {
-  "name": "GluuFederation/oxd-php",
+  "name": "dollar007/oxd-php-api",
   "description": "Use OpenID Connect to login by leveraging the oxd client service demon.",
   "license": "proprietary",
   "authors": [
@@ -12,6 +12,11 @@
     "php": ">=5.3.0"
   },
   "autoload": {
-    "classmap": ["src"]
+    "psr-0": {
+      "oxd-php-api": "src/"
+    },
+    "psr-4": {
+      "oxd-php-api\\protocolTests\\": "protocolTests/"
+    }
   }
 }
