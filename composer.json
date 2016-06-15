@@ -13,10 +13,10 @@
   },
   "autoload": {
     "psr-0": {
-      "oxd-php-api": "src/"
+      "oxdPhpApi": "src/"
     },
     "psr-4": {
-      "oxd-php-api\\protocolTests\\": "protocolTests/"
+      "oxdPhpApi": "protocolTests/"
     }
   }
 }
