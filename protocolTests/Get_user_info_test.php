@@ -1,7 +1,8 @@
 <?php
 
-namespace oxdRP\api;
-use oxdRP\api;
+namespace oxdrp;
+require_once __DIR__ . '/../src/oxdrp/Autoload.php';
+
 session_start();
 echo '<br/>Get_tokens_by_code <br/>';
 $get_tokens_by_code = new Get_tokens_by_code('../');

@@ -1,7 +1,8 @@
 <?php
 
-namespace oxdRP\api;
-use oxdRP\api;
+namespace oxdrp;
+require_once __DIR__ . '/../src/oxdrp/Autoload.php';
+
 session_start();
 $get_authorization_url = new Get_authorization_url('../');
 $get_authorization_url->setRequestOxdId($_SESSION['oxd_id']);

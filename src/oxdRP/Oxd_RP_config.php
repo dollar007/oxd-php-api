@@ -48,7 +48,7 @@
  * @author		Vlad Karapetyan
  * @author		vlad.karapetyan.1988@mail.ru
  */
-namespace oxdRP\api;
+namespace oxdrp;
 
 class Oxd_RP_config
 {

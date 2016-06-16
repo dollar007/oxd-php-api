@@ -49,8 +49,7 @@
  * @author		vlad.karapetyan.1988@mail.ru
  * @see	        Oxd_RP_config
  */
-namespace oxdRP\api;
-use oxdRP\api;
+namespace oxdrp;
 
 class Client_Socket_OXD_RP{
 
@@ -62,25 +61,19 @@ class Client_Socket_OXD_RP{
     /**
      * @var string $base_url      Base url for log file directory and oxd-rp-setting.json file.
      */
-    protected  $base_url = './';
+    protected  $base_url = __DIR__;
 
     /**
      * Constructor
      *
-     * Initialize base url for log file directory and oxd-rp-setting.json file.
-     *
-     * @param string $base_url
      * @return	void
      */
-    public function __construct($base_url)
+    public function __construct()
     {
-        if($base_url){
-            $this->base_url = $base_url;
-        }
-        $configJSON = file_get_contents($this->base_url.'oxd-rp-settings.json');
+        $configJSON = file_get_contents($this->base_url.'/oxd-rp-settings.json');
         $configOBJECT = json_decode($configJSON);
         if(!$configOBJECT->authorization_redirect_uri){
-            if(!$configJSON = file_get_contents($this->base_url.'oxd-rp-settings-test.json')){
+            if(!$configJSON = file_get_contents($this->base_url.'/oxd-rp-settings-test.json')){
                 $error = error_get_last();
                 $this->log("oxd-configuration-test: ", 'Error problem with json data.');
                 $this->error_message("HTTP request failed. Error was: " . $error['message']);
@@ -162,7 +155,7 @@ class Client_Socket_OXD_RP{
      * @return void
      **/
     public function log($process, $message){
-        $OldFile  = $this->base_url.'logs/oxd-php-server-'.date("Y-m-d") .'.log';
+        $OldFile  = $this->base_url.'/logs/oxd-php-server-'.date("Y-m-d") .'.log';
         $person = "\n".date('l jS \of F Y h:i:s A')."\n".$process.$message."\n";
         file_put_contents($OldFile, $person, FILE_APPEND | LOCK_EX);
 

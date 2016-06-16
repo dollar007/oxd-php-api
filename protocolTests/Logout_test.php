@@ -1,6 +1,9 @@
 <?php
+
+namespace oxdrp;
+require_once __DIR__ . '/../src/oxdrp/Autoload.php';
+
 session_start();
-require_once '../Logout.php';
 
 $logout = new Logout('../');
 $logout->setRequestOxdId($_SESSION['oxd_id']);
